@@ -5,7 +5,7 @@ GO_LATEST=$(curl https://go.dev/VERSION?m=text)
 
 cd ~
 echo "Descargando versión $GO_LATEST..."
-wget "https://go.dev/dl/$GO_LATEST.linux-amd64.tar.gz"
+wget "https://go.dev/dl/$GO_LATEST.linux-amd64.tar.gz" -O $GO_LATEST.linux-amd64.tar.gz
 
 tar xvfz $GO_LATEST.linux-amd64.tar.gz
 
@@ -27,5 +27,7 @@ echo 'alias go="export TMPDIR=~/tmp/; export GOMAXPROCS=1; go"' >> ~/.bashrc && 
 
 echo -n "go version: "
 go version
+
+rm -f $CWD/install_golang.sh
 
 echo "Listo!"
