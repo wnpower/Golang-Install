@@ -16,6 +16,7 @@ echo "Creando entorno..."
 mkdir ~/bin 2>/dev/null
 cd ~/bin
 
+rm -f go
 ln -s ~/go/bin/go go
 
 echo "Escribiendo variables..."
